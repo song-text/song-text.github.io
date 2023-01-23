@@ -1,0 +1,38 @@
+body {
+  font: 18px arial;
+  --rt-orange: #ee7222;
+  --rt-lightblue: #0095db;
+  --rt-darkblue: #023770;
+  --wordBackgroundColor: var(--rt-lightblue);
+  --wordBackgroundColorHighlight: var(--rt-orange);
+  --pausecircleBackground: var(--rt-darkblue);
+  background: var(--rt-lightblue);
+}
+
+h1 {
+  xfloat: right;
+}
+
+song-text audio {
+  float: right;
+}
+
+song-line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+song-pause {
+  display: inline-block;
+  width: 2em;
+}
+song-word {
+  background: var(--wordBackgroundColor);
+  font: 4.5vh arial;
+  cursor: pointer;
+  padding: 0 0.5em;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px black;
+}
