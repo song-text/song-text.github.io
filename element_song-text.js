@@ -66,11 +66,12 @@ customElements.define(
         .filter(Boolean) // remove undefined (empty lines)
         .map((line, lineIdx) => {
           // -----------------------------------------------------------------
-          let songwords = line.match(/\+?(\d+)*?[=](\w+)/g);
+          let songwords = line.match(/\+?(\d+)*?[=]\w+/g);
           if (songwords) {
             //console.log(`%c ${this.nodeName} `, "background:gold", songwords);
             line = songwords
               .map((songword, wordIdx) => {
+                console.warn(songword)
                 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                 let [time, word] = songword.split("=");
                 let at_attr = ` at="${time}" `;
